@@ -18,7 +18,10 @@ class Media {
   }
 
   getAverageRating() {
-    const averageRating = (this._ratings.reduce(
-      (accumulator, currentValue) => accumulator + currentValue, 0))/this._ratings.length;
+    (this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue, 0))/this._ratings.length;
+  }
+
+  toggleCheckedOutStatus() {
+    this._isCheckedOut = !this._isCheckedOut;
   }
 }
