@@ -30,7 +30,7 @@ class Media {
   }
 }
 
-class Books extends Media {
+class Book extends Media {
   constructor(title, author, pages) {
     super(title);
     this._author = author;
@@ -77,3 +77,25 @@ class CD extends Media {
     return this._songs;
   }
 }
+
+//-----------------------------------
+
+const bookJoyLuck = new Book('The Joy Luck Club', 'Amy Tan', 250);
+
+const movieDarjeeling = new Movie('The Darjeeling Limited', 'Wes Anderson', 93);
+
+const cdYoshimi = new CD('Yoshimi Battles the Pink Robots', 'Flaming Lips', 12);
+
+bookJoyLuck.addRating(2);
+bookJoyLuck.addRating(5);
+bookJoyLuck.addRating(4);
+
+console.log(bookJoyLuck.getAverageRating());
+
+movieDarjeeling.toggleCheckedOutStatus();
+
+console.log(movieDarjeeling._isCheckedOut);
+
+console.log(cdYoshimi);
+
+console.log(bookJoyLuck);
