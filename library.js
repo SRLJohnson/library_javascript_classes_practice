@@ -17,8 +17,15 @@ class Media {
     return this._ratings;
   }
 
+  /* FIRST ATTEMPT 
   getAverageRating() {
     (this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue, 0))/this._ratings.length;
+  }*/
+
+  getAverageRating() {
+    const ratingsSum = this._ratings.reduce((currentSum, rating) => currentSum + rating, 0);
+    const lengthOfArray = this._ratings.length;
+    return ratingsSum / lengthOfArray;
   }
 
   toggleCheckedOutStatus() {
