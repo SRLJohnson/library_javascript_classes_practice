@@ -17,7 +17,11 @@ class Media {
     return this._ratings;
   }
 
-  /* FIRST ATTEMPT 
+  set isCheckedOut(value) {
+    this._isCheckedOut = value;
+  }
+
+  /* FIRST ATTEMPT
   getAverageRating() {
     (this._ratings.reduce((accumulator, currentValue) => accumulator + currentValue, 0))/this._ratings.length;
   }*/
@@ -104,5 +108,9 @@ movieDarjeeling.toggleCheckedOutStatus();
 console.log(movieDarjeeling._isCheckedOut);
 
 console.log(cdYoshimi);
+
+console.log(bookJoyLuck);
+
+bookJoyLuck._isCheckedOut=true;
 
 console.log(bookJoyLuck);
